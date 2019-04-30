@@ -1,0 +1,52 @@
+[
+  {
+    "nomor": 1,
+    "wilayah": "Jl. Nursijan",
+    "durasi": 10
+  },
+  {
+    "nomor": 2,
+    "wilayah": "Jl. Bapa Supi",
+    "durasi": 10
+  },
+  {
+    "nomor": 3,
+    "wilayah": "Jl. Wangsareja",
+    "durasi": 5
+  },
+  {
+    "nomor": 4,
+    "wilayah": "Jl. Paledang",
+    "durasi": 5
+  },
+  {
+    "nomor": 5,
+    "wilayah": "Jl. Lengkong Besar",
+    "durasi": 15
+  },
+  {
+    "nomor": 6,
+    "wilayah": "Jl. Lengkong Kecil",
+    "durasi": 10
+  },
+  {
+    "nomor": 7,
+    "wilayah": "Jl. Cikawao",
+    "durasi": 10
+  },
+  {
+    "nomor": 8,
+    "wilayah": "Jl. Karapitan",
+    "durasi": 10
+  },
+  {
+    "nomor": 9,
+    "wilayah": "Jl. Emong",
+    "durasi": 10
+  },
+  {
+    "nomor": 10,
+    "wilayah": "Jl. Jati",
+    "durasi": 10
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "nomor": 1,
+    "batasBawah": 15,
+    "batasAtas": 17,
+    "frekuensi": 8
+  },
+  {
+    "nomor": 2,
+    "batasBawah": 18,
+    "batasAtas": 20,
+    "frekuensi": 7
+  },
+  {
+    "nomor": 3,
+    "batasBawah": 21,
+    "batasAtas": 23,
+    "frekuensi": 5
+  },
+  {
+    "nomor": 4,
+    "batasBawah": 24,
+    "batasAtas": 26,
+    "frekuensi": 0
+  },
+  {
+    "nomor": 5,
+    "batasBawah": 27,
+    "batasAtas": 29,
+    "frekuensi": 10
+  }
+]
