@@ -15,11 +15,11 @@ export default class Intro extends Component {
             </h5>
           </div>
           <div className="row center">
-            <a href="#" id="goButton" className="btn-large waves-effect waves-light orange">
-              <Link activeClass="active" to="section1" spy={true} smooth={true} offset={-70} duration={500} delay={100}>
+            <Link activeClass="active" to="section1" spy={true} smooth={true} offset={-70} duration={500} delay={100}>
+              <a href="#" id="goButton" className="btn-large waves-effect waves-light orange">
                 Lihat Data Pengamatan
-              </Link>
-            </a>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
