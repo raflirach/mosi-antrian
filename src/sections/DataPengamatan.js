@@ -5,6 +5,7 @@ let dataPengamatan = require('../data/dataPengamatan.json');
 let dataLamaPenyucian = require('../data/dataLamaPenyucian.json');
 let dataArea = require('../data/dataArea.json');
 let dataBilanganAcakPelanggan = require('../data/dataBilanganAcakPelanggan.json');
+let dataBlanganAcakLamaPencucian = require('../data/dataBlanganAcakLamaPencucian.json');
 
 export default class DataPengamatan extends Component {
   render() {
@@ -182,7 +183,7 @@ export default class DataPengamatan extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  {dataBilanganAcakPelanggan.map((data, i) => {
+                  {dataBlanganAcakLamaPencucian.map((data, i) => {
                     return (
                       <tr key={i}>
                         <td>{data.i}</td>
