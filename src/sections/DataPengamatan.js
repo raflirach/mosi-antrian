@@ -22,96 +22,83 @@ export default class DataPengamatan extends Component {
     return (
       <div id="section1">
         <div className="container">
-          <h3>Data Kedatangan Antar Pelanggan </h3>
-          <table>
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Kelas Interval</th>
-                <th />
-                <th>Frekuensi</th>
-              </tr>
-            </thead>
+          <h2>Data Hasil Pengamatan</h2>
+          <div className="tablecontainer">
+            <table>
+              <caption>Data Kedatangan Antar Pelanggan</caption>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Kelas Interval</th>
+                  <th />
+                  <th>Frekuensi</th>
+                </tr>
+              </thead>
 
-            <tbody>
-              {dataPengamatan.map((data, i) => {
-                return (
-                  <tr key={i}>
-                    <td>{data.nomor}</td>
-                    <td>{data.batasBawah}</td>
-                    <td>{data.batasAtas}</td>
-                    <td>{data.frekuensi}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-          <h3>Data Lama Penyucian Motor </h3>
-          <table>
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Kelas Interval</th>
-                <th />
-                <th>Frekuensi</th>
-              </tr>
-            </thead>
+              <tbody>
+                {dataPengamatan.map((data, i) => {
+                  return (
+                    <tr key={i}>
+                      <td>{data.nomor}</td>
+                      <td>{data.batasBawah}</td>
+                      <td>{data.batasAtas}</td>
+                      <td>{data.frekuensi}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <div className="tablecontainer">
+            <table>
+              <caption>Data Lama Penyucian Motor</caption>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Kelas Interval</th>
+                  <th />
+                  <th>Frekuensi</th>
+                </tr>
+              </thead>
 
-            <tbody>
-              {dataLamaPenyucian.map((data, i) => {
-                return (
-                  <tr key={i}>
-                    <td>{data.nomor}</td>
-                    <td>{data.batasBawah}</td>
-                    <td>{data.batasAtas}</td>
-                    <td>{data.frekuensi}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-          <h3>Data Area Tujuan </h3>
-          <table>
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Wilayah</th>
-                <th>Durasi (menit)</th>
-              </tr>
-            </thead>
+              <tbody>
+                {dataLamaPenyucian.map((data, i) => {
+                  return (
+                    <tr key={i}>
+                      <td>{data.nomor}</td>
+                      <td>{data.batasBawah}</td>
+                      <td>{data.batasAtas}</td>
+                      <td>{data.frekuensi}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <div className="tablecontainer">
+            <table>
+              <caption>Data Area Tujuan</caption>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Wilayah</th>
+                  <th>Durasi (menit)</th>
+                </tr>
+              </thead>
 
-            <tbody>
-              {dataArea.map((data, i) => {
-                return (
-                  <tr key={i}>
-                    <td>{data.nomor}</td>
-                    <td>{data.wilayah}</td>
-                    <td>{data.durasi}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-          <table>
-            <tr align="center">
-              <th rowspan="2">No</th>
-              <th colspan="2">Kelas Interval</th>
-              <th rowspan="2" />
-              <th rowspan="2">DESCRIPTION</th>
-            </tr>
-            <tr>
-              <th>Batas Bawah</th>
-              <th>Batas Atas</th>
-            </tr>
-            <tbody>
-              <tr>
-                <th rowspan="2">No</th>
-                <th colspan="2">Kelas Interval</th>
-                <th rowspan="2" />
-                <th rowspan="2">DESCRIPTION</th>
-              </tr>
-            </tbody>
-          </table>
+              <tbody>
+                {dataArea.map((data, i) => {
+                  return (
+                    <tr key={i}>
+                      <td>{data.nomor}</td>
+                      <td>{data.wilayah}</td>
+                      <td>{data.durasi}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
         {/* <GrafikLine judul="Grafik Kedatangan Antar Pelanggan" dataAreaProps={dataAreaProps} labelArea={labelArea} />
         <GrafikLine
