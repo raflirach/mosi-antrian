@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
-let dataArea = require('../data/dataArea.json');
 
 export default class Grafik extends Component {
   render() {
