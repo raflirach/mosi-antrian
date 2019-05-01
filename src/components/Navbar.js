@@ -15,9 +15,17 @@ export default class Navbar extends Component {
             <a id="logo-container" onClick={this.scrollToTop} href="#" className="brand-logo">
               MOSI 3
             </a>
-            <ul className="right hide-on-med-and-down">
+            <ul className="right hide-on-med-and-down items">
               <li>
-                <Link activeClass="active" to="section1" spy={true} smooth={true} offset={-70} duration={500}>
+                <Link
+                  activeClass="active"
+                  to="section1"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  delay={100}
+                >
                   Data Pengamatan
                 </Link>
               </li>
