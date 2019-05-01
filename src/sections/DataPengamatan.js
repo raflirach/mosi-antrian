@@ -153,6 +153,47 @@ export default class DataPengamatan extends Component {
                 </tbody>
               </table>
             </div>
+            <div className="tablecontainer">
+              <table>
+                <caption>
+                  Tabel Variabel Lama Pencucian
+                  <p>
+                    Menggunakan deret bilangan acak yang dibangkitkan dengan metode Linear Congruential Generator dengan
+                    asumsi:
+                  </p>
+                  <ul>
+                    <li>Konstanta Pengali : 6102</li>
+                    <li>Konstanta Increment : 6110</li>
+                    <li>Konstanta Modulus : 6132</li>
+                    <li>Nilai Awal : 1011</li>
+                  </ul>
+                  <p>
+                    Diasumsikan distribusi normal sehingga dipergunakan Z = (-2lnU<sub>i</sub>)<sup>&#189;</sup>{' '}
+                    sin(2&pi;U
+                    <sub>i+1</sub>) dan X = &#181;+&sigma;Z untuk memperoleh nilai variabel.
+                  </p>
+                </caption>
+
+                <thead>
+                  <tr>
+                    <th>i</th>
+                    <th>Bil. Acak</th>
+                    <th>Nilai</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {dataBilanganAcakPelanggan.map((data, i) => {
+                    return (
+                      <tr key={i}>
+                        <td>{data.i}</td>
+                        <td>{data.bilAcak}</td>
+                        <td>{data.nilai}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
