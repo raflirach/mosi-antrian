@@ -20,7 +20,7 @@ export default class DataPengamatan extends Component {
       return data.durasi;
     });
     return (
-      <div>
+      <div id="section1">
         <div className="container">
           <h3>Data Kedatangan Antar Pelanggan </h3>
           <table>
