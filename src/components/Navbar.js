@@ -17,7 +17,9 @@ export default class Navbar extends Component {
             </a>
             <ul className="right hide-on-med-and-down">
               <li>
-                <a href="#">Data Pengamatan</a>
+                <Link activeClass="active" to="section1" spy={true} smooth={true} offset={-70} duration={500}>
+                  Data Pengamatan
+                </Link>
               </li>
               <li>
                 <a href="#">Data Simulasi</a>
