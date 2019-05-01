@@ -11,3 +11,11 @@
   padding: 30px;
   margin-bottom: 30px;
 }
+
+p {
+  margin: 5px;
+}
+
+.tablecontainer li {
+  margin: 5px;
+}
