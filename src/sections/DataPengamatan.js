@@ -92,13 +92,33 @@ export default class DataPengamatan extends Component {
               })}
             </tbody>
           </table>
+          <table>
+            <tr align="center">
+              <th rowspan="2">No</th>
+              <th colspan="2">Kelas Interval</th>
+              <th rowspan="2" />
+              <th rowspan="2">DESCRIPTION</th>
+            </tr>
+            <tr>
+              <th>Batas Bawah</th>
+              <th>Batas Atas</th>
+            </tr>
+            <tbody>
+              <tr>
+                <th rowspan="2">No</th>
+                <th colspan="2">Kelas Interval</th>
+                <th rowspan="2" />
+                <th rowspan="2">DESCRIPTION</th>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <GrafikLine judul="Grafik Kedatangan Antar Pelanggan" dataAreaProps={dataAreaProps} labelArea={labelArea} />
+        {/* <GrafikLine judul="Grafik Kedatangan Antar Pelanggan" dataAreaProps={dataAreaProps} labelArea={labelArea} />
         <GrafikLine
           judul="Grafik Pengamatan Data Area Tujuan"
           dataAreaProps={dataPengamatanProps}
           labelArea={labelPengamatan}
-        />
+        /> */}
       </div>
     );
   }
