@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Link } from 'react-scroll';
+
 export default class Intro extends Component {
   render() {
     return (
@@ -14,7 +16,9 @@ export default class Intro extends Component {
           </div>
           <div className="row center">
             <a href="#" id="goButton" className="btn-large waves-effect waves-light orange">
-              Lihat Data Pengamatan
+              <Link activeClass="active" to="section1" spy={true} smooth={true} offset={-70} duration={500} delay={100}>
+                Lihat Data Pengamatan
+              </Link>
             </a>
           </div>
         </div>
