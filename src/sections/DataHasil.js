@@ -1,8 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-let dataBilanganAcakPelanggan = require("../data/dataBilanganAcakPelanggan.json");
-let dataBlanganAcakLamaPencucian = require("../data/dataBlanganAcakLamaPencucian.json");
-
+let dataTabelSimulasi = require('../data/dataTabelSimulasi.json');
 class DataHasil extends Component {
   render() {
     return (
@@ -54,11 +52,26 @@ class DataHasil extends Component {
             </tr>
           </thead>
           <tbody>
-            {dataBilanganAcakPelanggan.map((data, i) => {
+            {dataTabelSimulasi.map((data, i) => {
+              let datas = data.i * data.hasil;
+              console.log(datas);
               return (
                 <tr key={i}>
                   <td className="center">{data.i}</td>
                   <td className="center">{data.bilAcak}</td>
+                  <td className="center">{data.bilAcakPencucian}</td>
+                  <td className="center">{data.bilanganAcakTujuan}</td>
+                  <td className="center">{data.nilai}</td>
+                  <td />
+                  <td />
+                  <td className="center">{data.waktuPersiapan}</td>
+                  <td />
+                  <td className="center">{data.hasil}</td>
+                  <td className="center">{data.waktu}</td>
+                  <td />
+                  <td className="center">{data.petugas}</td>
+                  <td className="center">{data.waktuTunggu}</td>
+                  <td className="center">{data.waktuTungguPetugas}</td>
                 </tr>
               );
             })}
