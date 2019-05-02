@@ -53,8 +53,6 @@ class DataHasil extends Component {
           </thead>
           <tbody>
             {dataTabelSimulasi.map((data, i) => {
-              let datas = data.i * data.hasil;
-              console.log(datas);
               return (
                 <tr key={i}>
                   <td className="center">{data.i}</td>
