@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import GrafikLine from '../components/GrafikLine';
 
 let dataPengamatan = require('../data/dataPengamatan.json');
 let dataLamaPenyucian = require('../data/dataLamaPenyucian.json');
@@ -92,12 +91,6 @@ export default class DataPengamatan extends Component {
               </table>
             </div>
           </div>
-          {/* <GrafikLine judul="Grafik Kedatangan Antar Pelanggan" dataAreaProps={dataAreaProps} labelArea={labelArea} />
-        <GrafikLine
-          judul="Grafik Pengamatan Data Area Tujuan"
-          dataAreaProps={dataPengamatanProps}
-          labelArea={labelPengamatan}
-        /> */}
         </div>
         <div id="section2">
           <div className="container">
