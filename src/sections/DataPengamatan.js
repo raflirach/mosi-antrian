@@ -6,6 +6,7 @@ let dataLamaPenyucian = require('../data/dataLamaPenyucian.json');
 let dataArea = require('../data/dataArea.json');
 let dataBilanganAcakPelanggan = require('../data/dataBilanganAcakPelanggan.json');
 let dataBlanganAcakLamaPencucian = require('../data/dataBlanganAcakLamaPencucian.json');
+let dataTujuanAntar = require('../data/dataTujuanAntar.json');
 
 export default class DataPengamatan extends Component {
   render() {
@@ -189,6 +190,43 @@ export default class DataPengamatan extends Component {
                         <td>{data.i}</td>
                         <td>{data.bilAcak}</td>
                         <td>{data.nilai}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            <div className="tablecontainer">
+              <table>
+                <caption>
+                  Tabel Variabel Tujuan Antar
+                  <p>
+                    Menggunakan deret bilangan acak yang dibangkitkan dengan metode Multiplicative Generator dengan
+                    asumsi:
+                  </p>
+                  <ul>
+                    <li>Konstanta Pengali : 6102</li>
+                    <li>Konstanta Modulus : 6102</li>
+                    <li>Nilai Awal : 110</li>
+                  </ul>
+                </caption>
+
+                <thead>
+                  <tr>
+                    <th>i</th>
+                    <th>Bil. Acak</th>
+                    <th>Hasil</th>
+                    <th>Waktu (menit)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {dataTujuanAntar.map((data, i) => {
+                    return (
+                      <tr key={i}>
+                        <td>{data.i}</td>
+                        <td>{data.bilanganAcak}</td>
+                        <td>{data.hasil}</td>
+                        <td>{data.waktu}</td>
                       </tr>
                     );
                   })}
