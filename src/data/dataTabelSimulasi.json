@@ -13,7 +13,11 @@
     "hasil": "Jl. Lengkong Besar",
     "waktu": 15,
     "waktuPersiapan": 1,
-    "petugas": 1
+    "petugas": 1,
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "totalWaktu": 63,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 2,
@@ -24,18 +28,26 @@
     "hasil": "Jl. Bapa Supi",
     "waktu": 10,
     "waktuPersiapan": 1,
-    "petugas": 2
+    "petugas": 2,
+    "lamaCuci": 34,
+    "totalWaktu": 63,
+    "waktuSelesai": 48,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 3,
     "bilAcak": 0.711,
     "bilAcakPencucian": 0.189,
     "nilai": 5,
+    "totalWaktu": 63,
     "bilanganAcakTujuan": 7,
     "hasil": "Jl. Cikawao",
     "waktu": 10,
     "waktuPersiapan": 1,
-    "petugas": 3
+    "petugas": 3,
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 4,
@@ -44,9 +56,13 @@
     "nilai": 5,
     "bilanganAcakTujuan": 8,
     "hasil": "Jl. Karapitan",
+    "totalWaktu": 63,
     "waktu": 10,
     "waktuPersiapan": 1,
-    "petugas": 4
+    "petugas": 4,
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 5,
@@ -56,9 +72,13 @@
     "bilanganAcakTujuan": 1,
     "hasil": "Jl. Nursijan",
     "waktu": 10,
+    "totalWaktu": 63,
     "waktuPersiapan": 1,
     "petugas": 2,
-    "waktuTungguPetugas": 46
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 46,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 6,
@@ -68,9 +88,13 @@
     "bilanganAcakTujuan": 9,
     "hasil": "Jl. Emong",
     "waktu": 10,
+    "totalWaktu": 63,
     "waktuPersiapan": 1,
     "petugas": 4,
-    "waktuTungguPetugas": 36
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 36,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 7,
@@ -80,9 +104,13 @@
     "bilanganAcakTujuan": 6,
     "hasil": "Jl. Lengkong Kecil",
     "waktu": 10,
+    "totalWaktu": 63,
     "waktuPersiapan": 1,
     "petugas": 1,
-    "waktuTungguPetugas": 18
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 18,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 8,
@@ -91,82 +119,110 @@
     "nilai": 8,
     "bilanganAcakTujuan": 3,
     "hasil": "Jl. Wangsireja",
+    "totalWaktu": 63,
     "waktu": 5,
     "waktuPersiapan": 1,
     "petugas": 3,
-    "waktuTungguPetugas": 24
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 24,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 9,
     "bilAcak": 0.505,
     "bilAcakPencucian": 0.427,
     "nilai": 4,
+    "totalWaktu": 63,
     "bilanganAcakTujuan": 6,
     "hasil": "Jl. Lengkong Kecil",
     "waktu": 10,
     "waktuPersiapan": 1,
     "petugas": 1,
-    "waktuTungguPetugas": 2
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 2,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 10,
     "bilAcak": 0.84,
     "bilAcakPencucian": 0.419,
+    "totalWaktu": 63,
     "nilai": 6,
     "bilanganAcakTujuan": 7,
     "hasil": "Jl. Cikawao",
     "waktu": 10,
     "waktuPersiapan": 1,
     "petugas": 3,
-    "waktuTungguPetugas": 11
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 11,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 11,
     "bilAcak": 0.801,
     "bilAcakPencucian": 0.356,
+    "totalWaktu": 63,
     "nilai": 8,
     "bilanganAcakTujuan": 8,
     "hasil": "Jl. Karapitan",
     "waktu": 10,
     "waktuPersiapan": 1,
     "petugas": 2,
-    "waktuTunggu": 20
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTunggu": 20,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 12,
     "bilAcak": 0.975,
     "bilAcakPencucian": 0.853,
     "nilai": 7,
+    "totalWaktu": 63,
     "bilanganAcakTujuan": 1,
     "hasil": "Jl. Nursijan",
     "waktu": 10,
     "waktuPersiapan": 1,
     "petugas": 4,
-    "waktuTunggu": 9
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTunggu": 9,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 13,
     "bilAcak": 0.75,
     "bilAcakPencucian": 0.825,
     "nilai": 8,
+    "totalWaktu": 63,
     "bilanganAcakTujuan": 9,
     "hasil": "Jl. Emong",
     "waktu": 10,
     "waktuPersiapan": 1,
     "petugas": 2,
-    "waktuTungguPetugas": 16
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 16,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 14,
     "bilAcak": 0.501,
     "bilAcakPencucian": 0.605,
+    "totalWaktu": 63,
     "nilai": 7,
     "bilanganAcakTujuan": 6,
     "hasil": "Jl. Lengkong Kecil",
     "waktu": 10,
     "waktuPersiapan": 1,
     "petugas": 1,
-    "waktuTungguPetugas": 5
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 5,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 15,
@@ -174,11 +230,15 @@
     "bilAcakPencucian": 0.843,
     "nilai": 9,
     "bilanganAcakTujuan": 3,
+    "totalWaktu": 63,
     "hasil": "Jl. Wangsireja",
     "waktu": 5,
     "waktuPersiapan": 1,
     "petugas": 4,
-    "waktuTungguPetugas": 12
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 12,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 16,
@@ -188,9 +248,13 @@
     "bilanganAcakTujuan": 6,
     "hasil": "Jl. Lengkong Kecil",
     "waktu": 10,
+    "totalWaktu": 63,
     "waktuPersiapan": 1,
     "petugas": 3,
-    "waktuTungguPetugas": 16
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 16,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 17,
@@ -198,39 +262,52 @@
     "bilAcakPencucian": 0.975,
     "nilai": 8,
     "bilanganAcakTujuan": 7,
+    "totalWaktu": 63,
     "hasil": "Jl. Lengkong Besar",
     "waktu": 10,
     "waktuPersiapan": 1,
     "petugas": 2,
-    "waktuTungguPetugas": 20
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 20,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 18,
     "bilAcak": 0.495,
     "bilAcakPencucian": 0.808,
     "nilai": 12,
+    "totalWaktu": 63,
     "bilanganAcakTujuan": 8,
     "hasil": "Jl. Karapitan",
     "waktu": 10,
     "waktuPersiapan": 1,
     "petugas": 1,
-    "waktuTungguPetugas": 35
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 35,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 19,
     "bilAcak": 0.133,
     "bilAcakPencucian": 0.471,
+    "totalWaktu": 63,
     "nilai": 28,
     "bilanganAcakTujuan": 1,
     "hasil": "Jl. Nursijan",
     "waktu": 10,
     "waktuPersiapan": 1,
     "petugas": 4,
-    "waktuTungguPetugas": 17
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 17,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 20,
     "bilAcak": 0.994,
+    "totalWaktu": 63,
     "bilAcakPencucian": 0.773,
     "nilai": 9,
     "bilanganAcakTujuan": 9,
@@ -238,7 +315,10 @@
     "waktu": 10,
     "waktuPersiapan": 1,
     "petugas": 3,
-    "waktuTungguPetugas": 38
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 38,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 21,
@@ -246,11 +326,15 @@
     "bilAcakPencucian": 0.188,
     "nilai": 13,
     "bilanganAcakTujuan": 6,
+    "totalWaktu": 63,
     "hasil": "Jl. Lengkong Kecil",
     "waktu": 10,
     "waktuPersiapan": 1,
     "petugas": 2,
-    "waktuTungguPetugas": 33
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 33,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 22,
@@ -262,7 +346,11 @@
     "waktu": 5,
     "waktuPersiapan": 1,
     "petugas": 4,
-    "waktuTungguPetugas": 40
+    "totalWaktu": 63,
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 40,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 23,
@@ -274,7 +362,11 @@
     "waktu": 10,
     "waktuPersiapan": 1,
     "petugas": 1,
-    "waktuTungguPetugas": 26
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 26,
+    "totalWaktu": 63,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 24,
@@ -286,7 +378,11 @@
     "waktu": 10,
     "waktuPersiapan": 1,
     "petugas": 3,
-    "waktuTungguPetugas": 26
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 26,
+    "totalWaktu": 63,
+    "antarKedatanganPelanggan": 13
   },
   {
     "i": 25,
@@ -294,10 +390,14 @@
     "bilAcakPencucian": 0.135,
     "nilai": 13,
     "bilanganAcakTujuan": 8,
+    "totalWaktu": 63,
     "hasil": "Jl. Karapitan",
     "waktu": 10,
     "waktuPersiapan": 1,
     "petugas": 2,
-    "waktuTungguPetugas": 39
+    "lamaCuci": 34,
+    "waktuSelesai": 48,
+    "waktuTungguPetugas": 39,
+    "antarKedatanganPelanggan": 13
   }
 ]
