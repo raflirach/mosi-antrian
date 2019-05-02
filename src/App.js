@@ -15,8 +15,8 @@ export default class App extends Component {
         <Navbar />
         <Intro />
         <DataPengamatan />
-        <GrafikPengamatan />
         <DataHasil />
+        <GrafikPengamatan />
         <Footer />
       </div>
     );
