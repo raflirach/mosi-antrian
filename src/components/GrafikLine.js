@@ -3,7 +3,7 @@ import { Line } from 'react-chartjs-2';
 
 export default class Grafik extends Component {
   render() {
-    console.log(this.props.dataAreaProps);
+    console.log(this.props.dataArea);
     console.log(this.props.labelArea);
     const data = {
       labels: this.props.labelArea,
@@ -27,7 +27,7 @@ export default class Grafik extends Component {
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: this.props.dataAreaProps
+          data: this.props.dataArea
         }
       ]
     };
