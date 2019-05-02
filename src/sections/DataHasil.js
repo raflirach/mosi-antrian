@@ -62,13 +62,13 @@ class DataHasil extends Component {
                   <td className="center">{data.bilAcakPencucian}</td>
                   <td className="center">{data.bilanganAcakTujuan}</td>
                   <td className="center">{data.nilai}</td>
-                  <td />
-                  <td />
+                  <td className="center">{data.antarKedatanganPelanggan}</td>
+                  <td className="center">{data.lamaCuci}</td>
                   <td className="center">{data.waktuPersiapan}</td>
-                  <td />
+                  <td className="center">{data.waktuSelesai}</td>
                   <td className="center">{data.hasil}</td>
                   <td className="center">{data.waktu}</td>
-                  <td />
+                  <td className="center">{data.totalWaktu}</td>
                   <td className="center">{data.petugas}</td>
                   <td className="center">{data.waktuTunggu}</td>
                   <td className="center">{data.waktuTungguPetugas}</td>
