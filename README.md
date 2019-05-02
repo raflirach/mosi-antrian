@@ -22,4 +22,4 @@ You will also see any lint errors in the console.
 
 * **Muhamad Ibnu Tri Yuono** - *Initial work* - [ibnutriyuono](https://github.com/PurpleBooth)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/ibnutriyuono/pemodelan-simulasi-antrian/contributors) who participated in this project.
