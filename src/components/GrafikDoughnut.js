@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Doughnut } from 'react-chartjs-2';
+import React, { Component } from "react";
+import { Doughnut } from "react-chartjs-2";
 
 export default class GrafikDoughnut extends Component {
   render() {
@@ -9,35 +9,35 @@ export default class GrafikDoughnut extends Component {
         {
           data: this.props.dataArea,
           backgroundColor: [
-            '#FF6384',
-            '#36A2EB',
-            '#FFCE56',
-            '#273c75',
-            '#e84118',
-            '#dcdde1',
-            '#fbc531',
-            '#353b48',
-            '#7f8fa6',
-            '#c23616'
+            "#FF6384",
+            "#36A2EB",
+            "#FFCE56",
+            "#273c75",
+            "#e84118",
+            "#dcdde1",
+            "#fbc531",
+            "#353b48",
+            "#7f8fa6",
+            "#c23616"
           ],
           hoverBackgroundColor: [
-            '#FF6384',
-            '#36A2EB',
-            '#FFCE56',
-            '#273c75',
-            '#e84118',
-            '#dcdde1',
-            '#fbc531',
-            '#353b48',
-            '#7f8fa6',
-            '#c23616'
+            "#FF6384",
+            "#36A2EB",
+            "#FFCE56",
+            "#273c75",
+            "#e84118",
+            "#dcdde1",
+            "#fbc531",
+            "#353b48",
+            "#7f8fa6",
+            "#c23616"
           ]
         }
       ]
     };
     return (
       <div>
-        <h2>{this.props.judul}</h2>
+        <h4 align="center">{this.props.judul}</h4>
         <Doughnut data={data} />
       </div>
     );
