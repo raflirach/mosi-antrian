@@ -42,6 +42,19 @@ export default class Navbar extends Component {
                   Tabel Simulasi
                 </Link>
               </li>
+              <li>
+                <Link
+                  activeClass="active"
+                  to="section3"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  delay={100}
+                >
+                  Grafik Simulasi
+                </Link>
+              </li>
             </ul>
             <ul id="nav-mobile" className="sidenav">
               <li>
