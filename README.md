@@ -20,6 +20,6 @@ You will also see any lint errors in the console.
   
 ## Authors
 
-* **Muhamad Ibnu Tri Yuono ** - *Initial work* - [ibnutriyuono](https://github.com/ibnutriyuono)
+* **Muhamad Ibnu Tri Yuono** - *Initial work* - [ibnutriyuono](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
