@@ -4,8 +4,9 @@ let dataTabelSimulasi = require('../data/dataTabelSimulasi.json');
 class DataHasil extends Component {
   render() {
     return (
-      <div className="fixed_header pad">
+      <div className="fixed_header pad tablecontainer">
         <table>
+          <caption>Tabel Simulasi</caption>
           <thead>
             <tr>
               <td rowSpan={3} className="center">
