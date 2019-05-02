@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-let dataTabelSimulasi = require('../data/dataTabelSimulasi.json');
+let dataTabelSimulasi = require("../data/dataTabelSimulasi.json");
 class DataHasil extends Component {
   render() {
     return (
       <div className="fixed_header pad tablecontainer">
+        <h6 align="left">
+          <b>>> Tabel Simulasi</b>
+        </h6>
         <table>
-          <caption>Tabel Simulasi</caption>
           <thead>
             <tr>
               <td rowSpan={3} className="center">
