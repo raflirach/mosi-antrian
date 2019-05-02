@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import GrafikDoughnut from '../components/GrafikDoughnut';
-import GrafikBar from '../components/GrafikBar';
+import React, { Component } from "react";
+import GrafikDoughnut from "../components/GrafikDoughnut";
+import GrafikBar from "../components/GrafikBar";
 
-let dataArea = require('../data/dataArea.json');
-let dataTabelSimulasi = require('../data/dataTabelSimulasi.json');
+let dataArea = require("../data/dataArea.json");
+let dataTabelSimulasi = require("../data/dataTabelSimulasi.json");
 
 export default class GrafikPengamatan extends Component {
   render() {
@@ -22,14 +22,18 @@ export default class GrafikPengamatan extends Component {
 
     return (
       <div id="section3" className="container">
-        <h1>Grafik Pengamatan</h1>
+        <h1 align="center">Grafik Pengamatan</h1>
         <br />
         <br />
-        <GrafikDoughnut judul={'Grafik Frekuensi Tujuan Antar'} labelArea={labelArea} dataArea={dataAreaProps} />
+        <GrafikDoughnut
+          judul={"Grafik Frekuensi Tujuan Antar"}
+          labelArea={labelArea}
+          dataArea={dataAreaProps}
+        />
         <br />
         <GrafikBar
-          judul={'Grafik Total Waktu Pelayanan'}
-          labelGraph={'Total Waktu Pelayanan dalam Menit'}
+          judul={"Grafik Total Waktu Pelayanan"}
+          labelGraph={"Total Waktu Pelayanan dalam Menit"}
           labelArea={labelTabel}
           dataArea={dataTabel}
         />
