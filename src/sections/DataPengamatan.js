@@ -10,18 +10,6 @@ let dataTujuanAntar = require('../data/dataTujuanAntar.json');
 
 export default class DataPengamatan extends Component {
   render() {
-    let labelPengamatan = dataPengamatan.map(data => {
-      return data.frekuensi;
-    });
-    let dataPengamatanProps = dataPengamatan.map(data => {
-      return data.batasBawah;
-    });
-    let labelArea = dataArea.map(data => {
-      return data.wilayah;
-    });
-    let dataAreaProps = dataArea.map(data => {
-      return data.durasi;
-    });
     return (
       <div>
         <div id="section1">
