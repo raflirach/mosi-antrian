@@ -9,13 +9,9 @@ export default class Footer extends Component {
             <div className="row">
               <div className="col l6 s12">
                 <h5 className="white-text">MOSI-3</h5>
-                <p className="grey-text text-lighten-4">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, aliquam neque. Numquam ea
-                  voluptatibus necessitatibus praesentium beatae magnam dolor minima doloribus!
-                </p>
               </div>
               <div className="col l6 s12">
-                <h5 className="white-text">Kelompok</h5>
+                <h5 className="white-text">Kelompok </h5>
                 <ul>
                   <li>
                     <a className="white-text" href="#!">
@@ -38,12 +34,12 @@ export default class Footer extends Component {
           </div>
           <div className="footer-copyright">
             <div className="container">
-              Made by Kelompok-
+              Made by
               <a
                 className="orange-text text-lighten-3"
                 href="https://github.com/ibnutriyuono/pemodelan-simulasi-antrian"
               >
-                3
+                10116110-10116102-10116132
               </a>
             </div>
           </div>
