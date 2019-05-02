@@ -12,3 +12,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.fixed_header table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+  align-self: center;
+}
+
+.pad {
+  padding: 5em;
+}
