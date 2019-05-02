@@ -29,7 +29,6 @@ export default class GrafikPengamatan extends Component {
         <br />
         <h3>Grafik Data Pengamatan</h3>
         <GrafikDoughnut labelArea={labelArea} dataArea={dataAreaProps} />
-        <GrafikLine labelArea={labelPengamatan} dataArea={dataPengamatanProps} judul="Frekuensi" />
       </div>
     );
   }
