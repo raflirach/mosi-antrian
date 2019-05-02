@@ -37,6 +37,7 @@ export default class GrafikDoughnut extends Component {
     };
     return (
       <div>
+        <h2>{this.props.judul}</h2>
         <Doughnut data={data} />
       </div>
     );
