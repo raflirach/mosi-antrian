@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-let dataPengamatan = require("../data/dataPengamatan.json");
-let dataLamaPenyucian = require("../data/dataLamaPenyucian.json");
-let dataArea = require("../data/dataArea.json");
-let dataBilanganAcakPelanggan = require("../data/dataBilanganAcakPelanggan.json");
-let dataBlanganAcakLamaPencucian = require("../data/dataBlanganAcakLamaPencucian.json");
-let dataTujuanAntar = require("../data/dataTujuanAntar.json");
+let dataPengamatan = require('../data/dataPengamatan.json');
+let dataLamaPenyucian = require('../data/dataLamaPenyucian.json');
+let dataArea = require('../data/dataArea.json');
+let dataBilanganAcakPelanggan = require('../data/dataBilanganAcakPelanggan.json');
+let dataBlanganAcakLamaPencucian = require('../data/dataBlanganAcakLamaPencucian.json');
+let dataTujuanAntar = require('../data/dataTujuanAntar.json');
 
 export default class DataPengamatan extends Component {
   render() {
@@ -16,6 +16,8 @@ export default class DataPengamatan extends Component {
             <h2 align="center">Data Hasil Pengamatan</h2>
             <div className="tablecontainer">
               <h6 align="left"> >> Data Kedatangan Antar Pelanggan</h6>
+              <p>&#181; = 8.3</p>
+              <p>&sigma; = 4.076</p>
               <table>
                 <thead>
                   <tr>
@@ -42,6 +44,8 @@ export default class DataPengamatan extends Component {
             </div>
             <div className="tablecontainer">
               <h6 align="left"> >> Data Lama Penyucian Motor</h6>
+              <p>&#181; = 21.7</p>
+              <p>+&sigma; = 14.254</p>
               <table>
                 <thead>
                   <tr>
@@ -100,8 +104,8 @@ export default class DataPengamatan extends Component {
                 <b>>> Tabel Variabel antar Kedatangan pelanggan</b>
               </h6>
               <p>
-                Menggunakan deret bilangan acak yang dibangkitkan dengan metode
-                Linear Congruential Generator dengan asumsi:
+                Menggunakan deret bilangan acak yang dibangkitkan dengan metode Linear Congruential Generator dengan
+                asumsi:
               </p>
               <ul>
                 <li>Konstanta Pengali : 6102</li>
@@ -112,8 +116,7 @@ export default class DataPengamatan extends Component {
               <p>
                 Diasumsikan distribusi normal sehingga dipergunakan Z = (-2lnU
                 <sub>i</sub>)<sup>&#189;</sup> sin(2&pi;U
-                <sub>i+1</sub>) dan X = &#181;+&sigma;Z untuk memperoleh nilai
-                variabel.
+                <sub>i+1</sub>) dan X = &#181;+&sigma;Z untuk memperoleh nilai variabel.
               </p>
 
               <table>
@@ -142,8 +145,8 @@ export default class DataPengamatan extends Component {
                 <b>>> Tabel Variabel Lama Pencucian</b>
               </h6>
               <p>
-                Menggunakan deret bilangan acak yang dibangkitkan dengan metode
-                Linear Congruential Generator dengan asumsi:
+                Menggunakan deret bilangan acak yang dibangkitkan dengan metode Linear Congruential Generator dengan
+                asumsi:
               </p>
               <ul>
                 <li>Konstanta Pengali : 6102</li>
@@ -154,8 +157,7 @@ export default class DataPengamatan extends Component {
               <p>
                 Diasumsikan distribusi normal sehingga dipergunakan Z = (-2lnU
                 <sub>i</sub>)<sup>&#189;</sup> sin(2&pi;U
-                <sub>i+1</sub>) dan X = &#181;+&sigma;Z untuk memperoleh nilai
-                variabel.
+                <sub>i+1</sub>) dan X = &#181;+&sigma;Z untuk memperoleh nilai variabel.
               </p>
               <table>
                 <thead>
@@ -180,12 +182,11 @@ export default class DataPengamatan extends Component {
             </div>
             <div className="tablecontainer">
               <h6 align="left">
-                {" "}
+                {' '}
                 <b>>> Tabel Variabel Tujuan Antar</b>
               </h6>
               <p>
-                Menggunakan deret bilangan acak yang dibangkitkan dengan metode
-                Multiplicative Generator dengan asumsi:
+                Menggunakan deret bilangan acak yang dibangkitkan dengan metode Multiplicative Generator dengan asumsi:
               </p>
               <ul>
                 <li>Konstanta Pengali : 6102</li>
