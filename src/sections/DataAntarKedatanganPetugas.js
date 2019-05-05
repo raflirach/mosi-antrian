@@ -3,7 +3,12 @@ import React, { Component } from 'react';
 export default class DataAntarKedatanganPetugas extends Component {
   constructor(props) {
     super(props);
-    this.state = { zi: [], z01: [], cars: [] };
+    this.state = { zi: [], z01: [], Zi1: [], dataTabel: {} };
+  }
+
+  componentDidMount() {
+    this.perhitunganZi();
+    this.perhitunganZi1();
   }
 
   perhitunganZi = () => {
@@ -17,13 +22,33 @@ export default class DataAntarKedatanganPetugas extends Component {
       let list = Array.from(this.state.zi);
       this.state.zi.push(Z0);
       this.setState({ list });
-      //   console.log(this.state.zi);
     }
+    let listz01 = Array.from(this.state.z01);
+    this.state.z01.push(this.state.zi[0]);
+    this.setState({ listz01 });
+    console.log(this.state.dataTabel);
+
+    // let hasil = Array.from(this.state.dataTabel);
+    // this.state.dataTabel.push(this.state.zi);
+    // this.setState({ hasil });
   };
 
-  componentDidMount() {
-    this.perhitunganZi();
-  }
+  perhitunganZi1 = () => {
+    let a = 6102;
+    let c = 6110;
+    let Z01 = 308;
+    let m = 6132;
+    for (let i = 0; i < 26; i++) {
+      Z01 = (a * Z01 + c) % m;
+      let listz01 = Array.from(this.state.Zi1);
+      this.state.Zi1.push(Z01);
+      this.setState({ listz01 });
+    }
+    let hasil = Array.from(this.state.dataTabel);
+    this.state.dataTabel.push(this.state.Zi1);
+    this.setState({ hasil });
+    // console.log(this.state.dataTabel);
+  };
 
   render() {
     return (
@@ -76,13 +101,16 @@ export default class DataAntarKedatanganPetugas extends Component {
               </thead>
 
               <tbody>
-                {this.state.zi.map((data, i) => {
-                  return (
-                    <tr key={i}>
-                      <td>{i}</td>
-                      <td>{data}</td>
-                    </tr>
-                  );
+                {this.state.dataTabel.map((data, i) => {
+                  data.map(e => {
+                    console.log(e);
+                    return (
+                      <tr key={i}>
+                        <td>{i}</td>
+                        <td>{e[0]}</td>
+                      </tr>
+                    );
+                  });
                 })}
               </tbody>
             </table>
