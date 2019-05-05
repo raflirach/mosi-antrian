@@ -7,6 +7,7 @@ import Intro from './sections/Intro';
 import DataPengamatan from './sections/DataPengamatan';
 import GrafikPengamatan from './sections/GrafikPengamatan';
 import DataHasil from './sections/DataHasil';
+import DataAntarKedatanganPetugas from './sections/DataAntarKedatanganPetugas';
 
 export default class App extends Component {
   render() {
@@ -15,6 +16,7 @@ export default class App extends Component {
         <Navbar />
         <Intro />
         <DataPengamatan />
+        <DataAntarKedatanganPetugas />
         <DataHasil />
         <GrafikPengamatan />
         <Footer />
