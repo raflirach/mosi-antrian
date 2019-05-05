@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-let dataTabelSimulasi = require("../data/dataTabelSimulasi.json");
+let dataTabelSimulasi = require('../data/dataTabelSimulasi.json');
 class DataHasil extends Component {
   render() {
     return (
