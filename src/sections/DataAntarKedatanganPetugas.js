@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export default class DataAntarKedatanganPetugas extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ export default class DataAntarKedatanganPetugas extends Component {
       let list = Array.from(this.state.zi);
       this.state.zi.push(Z0);
       this.setState({ list });
-      console.log(this.state.zi);
+      //   console.log(this.state.zi);
     }
   };
 
@@ -34,8 +34,8 @@ export default class DataAntarKedatanganPetugas extends Component {
               <b>>> Tabel Variabel antar Kedatangan pelanggan</b>
             </h6>
             <p>
-              Menggunakan deret bilangan acak yang dibangkitkan dengan metode
-              Linear Congruential Generator dengan asumsi:
+              Menggunakan deret bilangan acak yang dibangkitkan dengan metode Linear Congruential Generator dengan
+              asumsi:
             </p>
             <ul>
               <li>Konstanta Pengali : 6102</li>
@@ -46,8 +46,7 @@ export default class DataAntarKedatanganPetugas extends Component {
             <p>
               Diasumsikan distribusi normal sehingga dipergunakan Z = (-2lnU
               <sub>i</sub>)<sup>&#189;</sup> sin(2&pi;U
-              <sub>i+1</sub>) dan X = &#181;+&sigma;Z untuk memperoleh nilai
-              variabel.
+              <sub>i+1</sub>) dan X = &#181;+&sigma;Z untuk memperoleh nilai variabel.
             </p>
             <table>
               <thead>
@@ -77,11 +76,14 @@ export default class DataAntarKedatanganPetugas extends Component {
               </thead>
 
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                </tr>
+                {this.state.zi.map((data, i) => {
+                  return (
+                    <tr key={i}>
+                      <td>{i}</td>
+                      <td>{data}</td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
