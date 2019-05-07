@@ -17,22 +17,17 @@ export default class DataAntarKedatanganPetugas extends Component {
   }
 
   componentDidMount() {
-    this.perhitunganZi();
-    this.perhitunganZi1();
-    this.perhitunganUi();
-    this.perhitunganUi1();
-    this.perhitunganln();
-    this.perhitunganSin();
-    this.perhitunganZ();
-    this.perhitunganX();
+    this.perhitunganZi(6102, 6110, 1011, 6132);
+    this.perhitunganZi1(6102, 6110, this.state.z01, 6132);
+    this.perhitunganUi(this.state.zi, 6132);
+    this.perhitunganUi1(this.state.zi1, 6132);
+    this.perhitunganln(this.state.Ui);
+    this.perhitunganSin(this.state.Ui1);
+    this.perhitunganZ(this.state.ln, this.state.sin);
+    this.perhitunganX(this.state.Z, 8.3, 4.075);
   }
 
-  perhitunganZi = () => {
-    let a = 6102;
-    let c = 6110;
-    let Z0 = 1011;
-    let m = 6132;
-
+  perhitunganZi = (a, c, Z0, m) => {
     for (let i = 0; i <= 25; i++) {
       Z0 = (a * Z0 + c) % m;
       let list = Array.from(this.state.zi);
@@ -44,43 +39,34 @@ export default class DataAntarKedatanganPetugas extends Component {
     this.setState({ listz01 });
   };
 
-  perhitunganZi1 = () => {
-    let a = 6102;
-    let c = 6110;
-    let Z01 = this.state.z01;
-    let m = 6132;
+  perhitunganZi1 = (a, c, Z0, m) => {
     for (let i = 0; i < 26; i++) {
-      Z01 = (a * Z01 + c) % m;
+      Z0 = (a * Z0 + c) % m;
       let listz01 = Array.from(this.state.zi1);
-      this.state.zi1.push(Z01);
+      this.state.zi1.push(Z0);
       this.setState({ listz01 });
     }
   };
 
-  perhitunganUi = () => {
-    let Zi = this.state.zi;
-    let m = 6132;
+  perhitunganUi = (zi, m) => {
     for (let i = 0; i < 26; i++) {
-      let u = Zi[i] / m;
+      let u = zi[i] / m;
       let list = Array.from(this.state.Ui);
       this.state.Ui.push(u.toFixed(3));
       this.setState({ list });
     }
   };
 
-  perhitunganUi1 = () => {
-    let zi1 = this.state.zi1;
-    let m = 6132;
+  perhitunganUi1 = (zi, m) => {
     for (let i = 0; i < 26; i++) {
-      let u = zi1[i] / m;
+      let u = zi[i] / m;
       let list = Array.from(this.state.Ui1);
       this.state.Ui1.push(u.toFixed(3));
       this.setState({ list });
     }
   };
 
-  perhitunganln = () => {
-    let Ui = this.state.Ui;
+  perhitunganln = Ui => {
     for (let i = 0; i < 26; i++) {
       let hasil = Math.sqrt(-2 * Math.log(Ui[i]));
       let list = Array.from(this.state.ln);
@@ -89,19 +75,16 @@ export default class DataAntarKedatanganPetugas extends Component {
     }
   };
 
-  perhitunganSin = () => {
-    let Ui1 = this.state.Ui1;
+  perhitunganSin = Ui => {
     for (let i = 0; i < 26; i++) {
-      let hasil = Math.sin(2 * Math.PI * Ui1[i]);
+      let hasil = Math.sin(2 * Math.PI * Ui[i]);
       let list = Array.from(this.state.sin);
       this.state.sin.push(hasil.toFixed(3));
       this.setState({ list });
     }
   };
 
-  perhitunganZ = () => {
-    let ln = this.state.ln;
-    let sin = this.state.sin;
+  perhitunganZ = (ln, sin) => {
     for (let i = 0; i < 26; i++) {
       let hasil = ln[i] * sin[i];
       let list = Array.from(this.state.Z);
@@ -110,10 +93,7 @@ export default class DataAntarKedatanganPetugas extends Component {
     }
   };
 
-  perhitunganX = () => {
-    let Z = this.state.Z;
-    let rata2 = 8.3;
-    let s_baku = 4.075;
+  perhitunganX = (Z, rata2, s_baku) => {
     for (let i = 0; i < 26; i++) {
       let hasil = rata2 + s_baku * Z[i];
       let list = Array.from(this.state.X);
