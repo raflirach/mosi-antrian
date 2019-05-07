@@ -1,14 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class DataAntarKedatanganPetugas extends Component {
   constructor(props) {
     super(props);
-    this.state = { zi: [], z01: [], Zi1: [], dataTabel: {} };
+    this.state = {
+      zi: [],
+      z01: [],
+      Zi1: [],
+      Ui: [],
+      Ui1: [],
+      ln: [],
+      sin: [],
+      Z: [],
+      X: []
+    };
   }
 
   componentDidMount() {
     this.perhitunganZi();
     this.perhitunganZi1();
+    this.perhitunganUi();
+    this.perhitunganUi1();
+    this.perhitunganln();
+    this.perhitunganSin();
+    this.perhitunganZ();
+    this.perhitunganX();
   }
 
   perhitunganZi = () => {
@@ -26,17 +42,12 @@ export default class DataAntarKedatanganPetugas extends Component {
     let listz01 = Array.from(this.state.z01);
     this.state.z01.push(this.state.zi[0]);
     this.setState({ listz01 });
-    console.log(this.state.dataTabel);
-
-    // let hasil = Array.from(this.state.dataTabel);
-    // this.state.dataTabel.push(this.state.zi);
-    // this.setState({ hasil });
   };
 
   perhitunganZi1 = () => {
     let a = 6102;
     let c = 6110;
-    let Z01 = 308;
+    let Z01 = this.state.z01;
     let m = 6132;
     for (let i = 0; i < 26; i++) {
       Z01 = (a * Z01 + c) % m;
@@ -44,13 +55,76 @@ export default class DataAntarKedatanganPetugas extends Component {
       this.state.Zi1.push(Z01);
       this.setState({ listz01 });
     }
-    let hasil = Array.from(this.state.dataTabel);
-    this.state.dataTabel.push(this.state.Zi1);
-    this.setState({ hasil });
-    // console.log(this.state.dataTabel);
+  };
+
+  perhitunganUi = () => {
+    let Zi = this.state.zi;
+    let m = 6132;
+    for (let i = 0; i < 26; i++) {
+      let u = Zi[i] / m;
+      let list = Array.from(this.state.Ui);
+      this.state.Ui.push(u.toFixed(3));
+      this.setState({ list });
+    }
+  };
+
+  perhitunganUi1 = () => {
+    let Zi1 = this.state.Zi1;
+    let m = 6132;
+    for (let i = 0; i < 26; i++) {
+      let u = Zi1[i] / m;
+      let list = Array.from(this.state.Ui1);
+      this.state.Ui1.push(u.toFixed(3));
+      this.setState({ list });
+    }
+  };
+
+  perhitunganln = () => {
+    let Ui = this.state.Ui;
+    for (let i = 0; i < 26; i++) {
+      let hasil = Math.sqrt(-2 * Math.log(Ui[i]));
+      let list = Array.from(this.state.ln);
+      this.state.ln.push(hasil.toFixed(3));
+      this.setState({ list });
+    }
+  };
+
+  perhitunganSin = () => {
+    let Ui1 = this.state.Ui1;
+    for (let i = 0; i < 26; i++) {
+      let hasil = Math.sin(2 * Math.PI * Ui1[i]);
+      let list = Array.from(this.state.sin);
+      this.state.sin.push(hasil.toFixed(3));
+      this.setState({ list });
+    }
+  };
+
+  perhitunganZ = () => {
+    let ln = this.state.ln;
+    let sin = this.state.sin;
+    for (let i = 0; i < 26; i++) {
+      let hasil = ln[i] * sin[i];
+      let list = Array.from(this.state.Z);
+      this.state.Z.push(hasil.toFixed(3));
+      this.setState({ list });
+    }
+  };
+
+  perhitunganX = () => {
+    let Z = this.state.Z;
+    let rata2 = 8.3;
+    let s_baku = 4.075;
+    for (let i = 0; i < 26; i++) {
+      let hasil = rata2 + s_baku * Z[i];
+      let list = Array.from(this.state.X);
+      this.state.X.push(hasil.toFixed(0));
+      this.setState({ list });
+    }
   };
 
   render() {
+    const { zi, Zi1, Ui, Ui1, ln, sin, Z, X } = this.state;
+
     return (
       <div>
         <div className="container">
@@ -59,8 +133,8 @@ export default class DataAntarKedatanganPetugas extends Component {
               <b>>> Tabel Variabel antar Kedatangan pelanggan</b>
             </h6>
             <p>
-              Menggunakan deret bilangan acak yang dibangkitkan dengan metode Linear Congruential Generator dengan
-              asumsi:
+              Menggunakan deret bilangan acak yang dibangkitkan dengan metode
+              Linear Congruential Generator dengan asumsi:
             </p>
             <ul>
               <li>Konstanta Pengali : 6102</li>
@@ -71,7 +145,8 @@ export default class DataAntarKedatanganPetugas extends Component {
             <p>
               Diasumsikan distribusi normal sehingga dipergunakan Z = (-2lnU
               <sub>i</sub>)<sup>&#189;</sup> sin(2&pi;U
-              <sub>i+1</sub>) dan X = &#181;+&sigma;Z untuk memperoleh nilai variabel.
+              <sub>i+1</sub>) dan X = &#181;+&sigma;Z untuk memperoleh nilai
+              variabel.
             </p>
             <table>
               <thead>
@@ -101,16 +176,20 @@ export default class DataAntarKedatanganPetugas extends Component {
               </thead>
 
               <tbody>
-                {this.state.dataTabel.map((data, i) => {
-                  data.map(e => {
-                    console.log(e);
-                    return (
-                      <tr key={i}>
-                        <td>{i}</td>
-                        <td>{e[0]}</td>
-                      </tr>
-                    );
-                  });
+                {zi.map((value, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>{index}</td>
+                      <td>{value}</td>
+                      <td>{Zi1[index]}</td>
+                      <td>{Ui[index]}</td>
+                      <td>{Ui1[index]}</td>
+                      <td>{ln[index]}</td>
+                      <td>{sin[index]}</td>
+                      <td>{Z[index]}</td>
+                      <td>{X[index]}</td>
+                    </tr>
+                  );
                 })}
               </tbody>
             </table>
