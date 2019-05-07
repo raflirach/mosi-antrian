@@ -10,7 +10,7 @@ class DataSimulasi extends Component {
       <div id="section2">
         <div className="container">
           <h2 align="center">Bilangan Acak dan Variabel yg Dibangkitkan</h2>
-          <Tabs defaultIndex={2}>
+          <Tabs defaultIndex={0}>
             <TabList>
               <Tab>Variabel Kedatangan Antar Pelanggan</Tab>
               <Tab>Variabel Lama Penyucian Motor</Tab>
