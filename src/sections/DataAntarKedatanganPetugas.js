@@ -6,7 +6,7 @@ export default class DataAntarKedatanganPetugas extends Component {
     this.state = {
       zi: [],
       z01: [],
-      Zi1: [],
+      zi1: [],
       Ui: [],
       Ui1: [],
       ln: [],
@@ -51,8 +51,8 @@ export default class DataAntarKedatanganPetugas extends Component {
     let m = 6132;
     for (let i = 0; i < 26; i++) {
       Z01 = (a * Z01 + c) % m;
-      let listz01 = Array.from(this.state.Zi1);
-      this.state.Zi1.push(Z01);
+      let listz01 = Array.from(this.state.zi1);
+      this.state.zi1.push(Z01);
       this.setState({ listz01 });
     }
   };
@@ -69,10 +69,10 @@ export default class DataAntarKedatanganPetugas extends Component {
   };
 
   perhitunganUi1 = () => {
-    let Zi1 = this.state.Zi1;
+    let zi1 = this.state.zi1;
     let m = 6132;
     for (let i = 0; i < 26; i++) {
-      let u = Zi1[i] / m;
+      let u = zi1[i] / m;
       let list = Array.from(this.state.Ui1);
       this.state.Ui1.push(u.toFixed(3));
       this.setState({ list });
@@ -123,77 +123,75 @@ export default class DataAntarKedatanganPetugas extends Component {
   };
 
   render() {
-    const { zi, Zi1, Ui, Ui1, ln, sin, Z, X } = this.state;
+    const { zi, zi1, Ui, Ui1, ln, sin, Z, X } = this.state;
 
     return (
       <div>
-        <div className="container">
-          <div className="tablecontainer">
-            <h6 align="left">
-              <b>>> Tabel Variabel antar Kedatangan pelanggan</b>
-            </h6>
-            <p>
-              Menggunakan deret bilangan acak yang dibangkitkan dengan metode
-              Linear Congruential Generator dengan asumsi:
-            </p>
-            <ul>
-              <li>Konstanta Pengali : 6102</li>
-              <li>Konstanta Increment : 6110</li>
-              <li>Konstanta Modulus : 6132</li>
-              <li>Nilai Awal : 1011</li>
-            </ul>
-            <p>
-              Diasumsikan distribusi normal sehingga dipergunakan Z = (-2lnU
-              <sub>i</sub>)<sup>&#189;</sup> sin(2&pi;U
-              <sub>i+1</sub>) dan X = &#181;+&sigma;Z untuk memperoleh nilai
-              variabel.
-            </p>
-            <table>
-              <thead>
-                <tr>
-                  <th>i</th>
-                  <th>
-                    Z<sub>i</sub>
-                  </th>
-                  <th>
-                    Z<sub>i+1</sub>
-                  </th>
-                  <th>
-                    U<sub>i</sub>
-                  </th>
-                  <th>
-                    U<sub>i+1</sub>
-                  </th>
-                  <th>
-                    (-2ln(U<sub>i</sub>))<sup>1/2</sup>
-                  </th>
-                  <th>
-                    sin(2&pi;U<sub>i+1</sub>)
-                  </th>
-                  <th>Z</th>
-                  <th>X</th>
-                </tr>
-              </thead>
+        <div className="tablecontainer">
+          <h6 align="left">
+            <b>>> Tabel Variabel antar Kedatangan pelanggan</b>
+          </h6>
+          <p>
+            Menggunakan deret bilangan acak yang dibangkitkan dengan metode
+            Linear Congruential Generator dengan asumsi:
+          </p>
+          <ul>
+            <li>Konstanta Pengali : 6102</li>
+            <li>Konstanta Increment : 6110</li>
+            <li>Konstanta Modulus : 6132</li>
+            <li>Nilai Awal : 1011</li>
+          </ul>
+          <p>
+            Diasumsikan distribusi normal sehingga dipergunakan Z = (-2lnU
+            <sub>i</sub>)<sup>&#189;</sup> sin(2&pi;U
+            <sub>i+1</sub>) dan X = &#181;+&sigma;Z untuk memperoleh nilai
+            variabel.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>i</th>
+                <th>
+                  Z<sub>i</sub>
+                </th>
+                <th>
+                  Z<sub>i+1</sub>
+                </th>
+                <th>
+                  U<sub>i</sub>
+                </th>
+                <th>
+                  U<sub>i+1</sub>
+                </th>
+                <th>
+                  (-2ln(U<sub>i</sub>))<sup>1/2</sup>
+                </th>
+                <th>
+                  sin(2&pi;U<sub>i+1</sub>)
+                </th>
+                <th>Z</th>
+                <th>X</th>
+              </tr>
+            </thead>
 
-              <tbody>
-                {zi.map((value, index) => {
-                  return (
-                    <tr key={index}>
-                      <td>{index}</td>
-                      <td>{value}</td>
-                      <td>{Zi1[index]}</td>
-                      <td>{Ui[index]}</td>
-                      <td>{Ui1[index]}</td>
-                      <td>{ln[index]}</td>
-                      <td>{sin[index]}</td>
-                      <td>{Z[index]}</td>
-                      <td>{X[index]}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+            <tbody>
+              {zi.map((value, index) => {
+                return (
+                  <tr key={index}>
+                    <td>{index}</td>
+                    <td>{value}</td>
+                    <td>{zi1[index]}</td>
+                    <td>{Ui[index]}</td>
+                    <td>{Ui1[index]}</td>
+                    <td>{ln[index]}</td>
+                    <td>{sin[index]}</td>
+                    <td>{Z[index]}</td>
+                    <td>{X[index]}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
       </div>
     );
