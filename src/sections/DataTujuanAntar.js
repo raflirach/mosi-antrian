@@ -86,7 +86,7 @@ class DataTujuanAntar extends Component {
   };
 
   render() {
-    const { zi, bilAcak, jalan, waktu } = this.state;
+    const { bilAcak, jalan, waktu } = this.state;
 
     return (
       <div className="tablecontainer">
