@@ -27,3 +27,23 @@ code {
 #section3 {
   padding-bottom: 30px;
 }
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #eef1fc;
+}
+
+th {
+  background-color: #6f8ae4;
+  color: white;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
