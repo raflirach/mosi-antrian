@@ -1,8 +1,44 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-let dataTabelSimulasi = require('../data/dataTabelSimulasi.json');
+let dataTabelSimulasi = require("../data/dataTabelSimulasi.json");
 class DataHasil extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      zi1: [],
+      zi2: [],
+      Ui1: [],
+      Ui2: []
+    };
+  }
+
+  componentDidMount() {
+    this.perhitunganZi(6102, 6110, 1011, 6132, this.state.zi1);
+    this.perhitunganUi(this.state.zi1, 6132, this.state.Ui1);
+    this.perhitunganZi(6110, 6132, 1011, 6102, this.state.zi2);
+    this.perhitunganUi(this.state.zi2, 6102, this.state.Ui2);
+  }
+
+  perhitunganZi = (a, c, Z0, m, target) => {
+    for (let i = 0; i <= 25; i++) {
+      Z0 = (a * Z0 + c) % m;
+      let list = Array.from(target);
+      target.push(Z0);
+      this.setState({ list });
+    }
+  };
+
+  perhitunganUi = (zi, m, target) => {
+    for (let i = 0; i < 26; i++) {
+      let u = zi[i] / m;
+      let list = Array.from(target);
+      target.push(u.toFixed(3));
+      this.setState({ list });
+    }
+  };
+
   render() {
+    const { Ui1, Ui2 } = this.state;
     return (
       <div className="fixed_header pad tablecontainer">
         <h6 align="left">
@@ -59,8 +95,8 @@ class DataHasil extends Component {
               return (
                 <tr key={i}>
                   <td className="center">{data.i}</td>
-                  <td className="center">{data.bilAcak}</td>
-                  <td className="center">{data.bilAcakPencucian}</td>
+                  <td className="center">{Ui1[i]}</td>
+                  <td className="center">{Ui2[i]}</td>
                   <td className="center">{data.bilanganAcakTujuan}</td>
                   <td className="center">{data.nilai}</td>
                   <td className="center">{data.antarKedatanganPelanggan}</td>
