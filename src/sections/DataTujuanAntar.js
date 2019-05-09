@@ -12,15 +12,12 @@ class DataTujuanAntar extends Component {
   }
 
   componentDidMount() {
-    this.perhitungaZi();
-    this.perhitungaBilAcak();
-    this.penentuanJalan();
+    this.perhitungaZi(6132, 6102, 110);
+    this.perhitungaBilAcak(this.state.zi, 6102);
+    this.penentuanJalan(this.state.bilAcak);
   }
 
-  perhitungaZi = () => {
-    let a = 6132;
-    let m = 6102;
-    let bil = 110;
+  perhitungaZi = (a, m, bil) => {
     for (let i = 0; i < 25; i++) {
       bil = (a * bil) % m;
       let list = Array.from(this.state.zi);
@@ -29,19 +26,17 @@ class DataTujuanAntar extends Component {
     }
   };
 
-  perhitungaBilAcak = () => {
-    let zi = this.state.zi;
-    let m = 6102;
+  perhitungaBilAcak = (zi, m) => {
     for (let i = 0; i < 25; i++) {
       let bil2 = (zi[i] / m) * 10;
       let list = Array.from(this.state.bilAcak);
       this.state.bilAcak.push(bil2.toFixed(0));
       this.setState({ list });
+      localStorage.setItem("C" + i.toString(), bil2.toFixed(0));
     }
   };
 
-  penentuanJalan = () => {
-    let bilAcak = this.state.bilAcak;
+  penentuanJalan = bilAcak => {
     let jalan = "";
     let durasi = 0;
     for (let i = 0; i < 25; i++) {
@@ -79,9 +74,11 @@ class DataTujuanAntar extends Component {
       let list = Array.from(this.state.jalan);
       this.state.jalan.push(jalan);
       this.setState({ list });
+      localStorage.setItem("I" + (i + 1).toString(), JSON.stringify(jalan));
       let list2 = Array.from(this.state.waktu);
       this.state.waktu.push(durasi);
       this.setState({ list2 });
+      localStorage.setItem("J" + (i + 1).toString(), durasi);
     }
   };
 
