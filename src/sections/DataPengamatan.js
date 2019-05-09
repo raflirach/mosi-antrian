@@ -79,9 +79,9 @@ export default class DataPengamatan extends Component {
                       })}
                     </tbody>
                   </table>
+                  <p>Rata-rata (&#181;) = 21.7</p>
+                  <p>Simpangan Baku(&sigma;) = 14.254</p>
                 </div>
-                <p>Rata-rata (&#181;) = 21.7</p>
-                <p>Simpangan Baku(&sigma;) = 14.254</p>
               </TabPanel>
               <TabPanel>
                 <div className="tablecontainer">
