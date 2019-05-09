@@ -1,7 +1,7 @@
 {
   "name": "mosi3",
   "version": "0.1.0",
-  "homepage": "http://raflirach.github.io/pemodelan-simulasi-antrian",
+  "homepage": "http://raflirach.github.io/mosi-antrian",
   "private": true,
   "dependencies": {
     "chart.js": "^2.8.0",
@@ -20,8 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
