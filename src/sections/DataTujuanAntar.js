@@ -9,6 +9,7 @@ class DataTujuanAntar extends Component {
       jalan: [],
       waktu: []
     };
+    this.refreshPage = this.refreshPage.bind(this);
   }
 
   componentDidMount() {
@@ -82,6 +83,10 @@ class DataTujuanAntar extends Component {
     }
   };
 
+  refreshPage = () => {
+    window.location.reload();
+  };
+
   render() {
     const { bilAcak, jalan, waktu } = this.state;
 
@@ -122,6 +127,12 @@ class DataTujuanAntar extends Component {
             })}
           </tbody>
         </table>
+
+        <div className="row center mt">
+          <button type="button" onClick={this.refreshPage}>
+            <span>Masukan Data ke tabel Simulasi</span>
+          </button>
+        </div>
       </div>
     );
   }
