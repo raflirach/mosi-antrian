@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/mosi-antrian/precache-manifest.6008f7d8cec0d69251fd73eb61f93c19.js"
+  "/mosi-antrian/precache-manifest.47375bdb2b44eaf15a2f797938df581e.js"
 );
 
 self.addEventListener('message', (event) => {
