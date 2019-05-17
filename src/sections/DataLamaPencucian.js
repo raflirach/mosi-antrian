@@ -54,6 +54,7 @@ export default class DataAntarKedatanganPetugas extends Component {
       let list = Array.from(this.state.Ui);
       this.state.Ui.push(u.toFixed(3));
       this.setState({ list });
+      localStorage.setItem("B" + i.toString(), hasil.toFixed(3));
     }
   };
 
@@ -72,7 +73,6 @@ export default class DataAntarKedatanganPetugas extends Component {
       let list = Array.from(this.state.ln);
       this.state.ln.push(hasil.toFixed(3));
       this.setState({ list });
-      localStorage.setItem("B" + i.toString(), hasil.toFixed(3));
     }
   };
 
